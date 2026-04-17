@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static 'css/main.css' %} ">
+    <title>Registration</title>
+</head>
+<body>
+    <center>
+        <h1>Registration Page for Student Management App</h1>
+
+        <form action="/" method="POST">
+            {% csrf_token %}
+            Name: <input type="text" name="name"> <br>
+            Roll: <input type="text" name="roll"> <br>
+            Mob: <input type="text" name="mob"> <br>
+
+            <button type="submit"> Submit </button>
+            <br>
+            <button> <a href="/about">Show Details</a></button>
+
+        </form>
+        <!-- <img src="{% static 'images/bg_img.jpg' %}" alt="background" width="500"> -->
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+</head>
+<body>
+    <center>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Mob</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{student.name}}</td>
+                    <td>{{student.roll}}</td>
+                    <td>{{student.mob}}</td>
+                    <td>
+                        <button style="background: orange;" ><a style="text-decoration: none; color: black;" href="edit/{{student.roll}}">Edit</a></button>
+                        <button style="background: red;" ><a style="text-decoration: none; color: black;" href="discard/{{student.roll}}">Delete</a></button>
+                    </td>
+                </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <button><a style="text-decoration: none; color: black;" href="/">Click here to insert new data</a></button>
+    </center>
+</body>
+</html>

@@ -1,0 +1,8 @@
+body{
+    background: url('/static/images/bg_img.jpg');
+    height: 100vh;
+    /* width: 100%; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
